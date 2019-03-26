@@ -1,34 +1,16 @@
 <template>
-  <div class="login-box">
-    <div class="login-logo">
-      <router-link to="/">
-        <b>NONIUS.</b>TV
-      </router-link>
-    </div>
-    <!-- /.login-logo -->
-    <div class="login-box-body">
-      <p class="login-box-msg" :style="{color: activeColor}">{{ message }}</p>
-      <form @keypress.enter="Login">
-        <div id="Login" class="form-group has-feedback">
-          <input v-model="username" type="text" class="form-control" placeholder="Username">
-          <span class="glyphicon glyphicon-user form-control-feedback"/>
-        </div>
-        <div id="Login" class="form-group has-feedback">
-          <input v-model="password" type="password" class="form-control" placeholder="Password">
-          <span class="glyphicon glyphicon-lock form-control-feedback"/>
-        </div>
-        <div class="row">
+   <div class="row">
           <!-- /.col -->
           <div class="col-xs-4">
             <google-signin-btn label="Sign In with Google" customClass="my-button" @click="signin"/>
-            <!--a id="signout-button" @click="signout()">Sign out</a-->
+            <a id="signout-button" @click="signout()">Sign out</a>
           </div>
 
           <!-- /.col -->
         </div>
-        <!--a @click="create()">new file</a-->
-        <!--a @click="seeFile()">see file</a-->
-        <!--a v-on:click="deleteF()">delete file</a-->
+        <a @click="create()">new file</a>
+        <a @click="seeFile()">see file</a>
+        <a @click="deleteF()">delete file</a>
       </form>
     </div>
   </div>
@@ -55,12 +37,6 @@ export default {
       loading: false,
       message: "Sign in to start your session",
       activeColor: "",
-      ickerApiLoaded: false,
-      developerKey: "AIzaSyAGB7160bJr9UqAsIKs6h8h9jH9HSQlbf0",
-      clientId:
-        "298218985189-k7niq94udl860m43bfiaqb3gb3l5ntfp.apps.googleusercontent.com",
-      scope: "profile https://www.googleapis.com/auth/drive",
-
       oauthToken: null
     };
   },
