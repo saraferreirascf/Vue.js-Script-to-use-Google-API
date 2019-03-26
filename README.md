@@ -139,6 +139,8 @@ Check if a file with that name already exists if it does, update it with new con
     
 ```
 
+## Examples
+o see some work examples go to Login.vue and main.js
 
 ## License
 
